@@ -1,0 +1,22 @@
+.input_group {
+  width: 100%;
+  label {
+    color: #000000;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+  }
+  input {
+    width: 100%;
+    background-color: #f3f4f6;
+    border: 0px;
+    padding: 16px;
+    border: 1px solid #e1e2e4;
+    border-radius: 6px;
+    color: #000000;
+    &:focus {
+      outline: 1px solid #fbbe16;
+    }
+  }
+}

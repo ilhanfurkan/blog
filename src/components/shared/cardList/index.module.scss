@@ -1,0 +1,23 @@
+.card_list_container {
+  display: flex;
+  gap: 32px;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    font-size: 52px;
+    color: var(--color-primary);
+    span {
+      color: var(--color-secondary-hover);
+    }
+  }
+  .card_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 24px;
+    .card_handler {
+      max-width: 48%;
+      min-width: 540px;
+      height: 240px;
+    }
+  }
+}
