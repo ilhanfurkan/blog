@@ -14,6 +14,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 24px;
+    padding: 1rem;
     .card_handler {
       max-width: 48%;
       min-width: 540px;

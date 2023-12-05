@@ -1,6 +1,7 @@
 .footer {
+  margin-top: 72px;
   background-color: var(--color-primary);
-  padding: 68px 0px 24px 0px;
+  padding: 52px 0px 24px 0px;
   .widgets {
     display: flex;
     border-bottom: 1px solid #191f23;
@@ -22,11 +23,11 @@
           color: #fafafa;
           &:hover {
             a {
-              color: var(--color-primary);
+              color: var(--color-secondary);
             }
           }
           a {
-            transition: 0.5s ease all;
+            transition: 0.3s ease all;
             color: #fafafa;
             font-size: 14px;
           }
@@ -48,7 +49,7 @@
       span {
         position: relative;
         z-index: 0;
-        color: var(--color-primary);
+        color: var(--color-secondary);
       }
     }
   }

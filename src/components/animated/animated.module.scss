@@ -1,0 +1,58 @@
+.animated_wrapper {
+  all: inherit;
+  padding: 0;
+  margin: 0;
+
+  transform: none;
+  animation: none;
+
+  &[data-animation-type='fade'] .animated {
+    opacity: 0;
+    visibility: hidden;
+  }
+  &[data-animation-type='fade'].isVisible .animated {
+    opacity: 1;
+    visibility: visible;
+  }
+  &[data-animation-type='slide'] .animated {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+  }
+  &[data-animation-type='slide'].isVisible .animated {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  .animated {
+    all: inherit;
+
+    padding: 0;
+    margin: 0;
+
+    transform: none;
+    animation: none;
+
+    transition: 950ms transform cubic-bezier(0.62, 0.05, 0.01, 0.99),
+      750ms opacity cubic-bezier(0.62, 0.05, 0.01, 0.99),
+      750ms visibility cubic-bezier(0.62, 0.05, 0.01, 0.99);
+
+    transition-delay: 0;
+    will-change: transform, opacity, visibility;
+  }
+}
+
+/* animations */
+
+@media (prefers-reduced-motion: reduce) {
+  .animated_wrapper {
+    &[data-animation-type='fade'] .animated,
+    [data-animation-type='slide'] .animated {
+      opacity: 1 !important;
+      visibility: visible !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+}

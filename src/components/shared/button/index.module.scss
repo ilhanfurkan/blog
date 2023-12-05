@@ -11,11 +11,16 @@
   justify-content: center;
   width: 100%;
   gap: 0.5rem;
-
+  border: none;
+  cursor: pointer;
   &[data-size='sm'] {
     padding: 4px 12px;
     font-size: 12px;
     font-weight: 500;
     line-height: 16px;
+  }
+  &:active {
+    transition: transform 0.2s;
+    transform: scale(0.94);
   }
 }

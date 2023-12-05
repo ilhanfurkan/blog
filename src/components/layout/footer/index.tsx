@@ -13,46 +13,50 @@ export default function Footer() {
         <div className={styles.widgets}>
           <div className={styles.widget}>
             <Link href={'/'}>
-              {/* <Image
-                src={Images.BalanceLogo}
-                width={250}
-                height={60}
-                alt="Footer Logo"
-              /> */}
+              <Image src={Images.Logo} width={80} height={80} alt="Logo" />
             </Link>
-            <p>Custom Software Development Company.</p>
+            <p>Special Boilerplate Website.</p>
           </div>
           <div className={styles.widget}>
-            <div className={styles.title}>Services</div>
-
+            <div className={styles.title}>Blogs</div>
+            <ul>
+              <li>
+                <Link href={'#'}>Zart</Link>
+              </li>
+              <li>
+                <Link href={'#'}>Zurt</Link>
+              </li>
+              <li>
+                <Link href={'#'}>Zort</Link>
+              </li>
+              <li>
+                <Link href={'#'}>Zirt</Link>
+              </li>
+            </ul>
           </div>
           <div className={styles.widget}>
-            <div className={styles.title}>Products</div>
-
-          </div>
-          <div className={styles.widget}>
-            <div className={styles.title}>Contact Us</div>
+            <div className={styles.title}>Contact</div>
             <ul>
               <li>
                 <Link href={'mailto:hello@balance.software'}>
-                  hello@balance.software
+                  furkan.llhan@hotmail.com
                 </Link>
               </li>
               <li>
-                <Link href={'#'}>+90 212 890 9590</Link>
+                <Link href={'mailto:hello@balance.software'}>
+                  furkanilhanresmi@gmail.com
+                </Link>
               </li>
               <li>
-                Head Quarter: 19 Mayıs Mh. 19 Mayıs Cd. UBM Plaza No: 37/21
-                Şişli/İstanbul Türkiye
+                <Link href={'#'}>+90 545 663 19 49</Link>
               </li>
-              <li>Branch: Batman Teknokent</li>
-              <li>Lithuania & BVI & Türkiye</li>
+              <li>Türkiye / Istanbul</li>
             </ul>
           </div>
         </div>
         <div className={styles.copyright}>
           <p>
-            2023 © All rights reserved by <span>Balance Software</span>.
+            2023 © All rights reserved by <span>MURKI</span>.
           </p>
         </div>
       </Container>

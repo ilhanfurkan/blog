@@ -25,6 +25,14 @@ export const blogList = [
   },
   {
     id: 4,
+    title: 'Blog Title4 123123 asdasd ',
+    description:
+      'little description little description  little description little description little description little description little description little description little description little description little description little description little description little description little description little description little description little description little description little description little description little description little description little description little description little description little description little description little description little description little description',
+    thumbnail: 'https://swiperjs.com/demos/images/nature-3.jpg',
+    link: '/',
+  },
+  {
+    id: 5,
     title: 'Blog Title4',
     description:
       'little description little description little description little description little description little description little description',
@@ -32,19 +40,11 @@ export const blogList = [
     link: '/',
   },
   {
-    id: 5,
-    title: 'Blog Title5',
-    description:
-      'little description little description little description little description little description little description little description',
-    thumbnail: 'https://swiperjs.com/demos/images/nature-4.jpg',
-    link: '/',
-  },
-  {
     id: 6,
-    title: 'Blog Title6',
+    title: 'Blog Title4',
     description:
       'little description little description little description little description little description little description little description',
-    thumbnail: 'https://swiperjs.com/demos/images/nature-5.jpg',
+    thumbnail: 'https://swiperjs.com/demos/images/nature-3.jpg',
     link: '/',
   },
 ];

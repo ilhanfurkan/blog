@@ -56,9 +56,10 @@ export default function Header() {
           <div className={styles.inner}>
             <div className={styles.logo}>
               <Link href={'/'}>
-                <Image src={Images.Logo} width={80} height={80} alt="Logo" />
+                  <Image src={Images.Logo} width={80} height={80} alt="Logo" />
               </Link>
             </div>
+
             <div
               className={styles.hamburger_menu}
               onClick={() => {
@@ -74,6 +75,7 @@ export default function Header() {
             <Navigation />
             <div className={styles.right_buttons}>
               <Button
+                typeButton="normal"
                 title="Feedback"
                 variant="primary"
                 link="mailto:hello@balance.software"

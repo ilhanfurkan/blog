@@ -1,13 +1,14 @@
 .hero {
-  background-color: var(--color-secondary);
+  background-color: var(--color-secondary-hover);
   // background-color: black;
-  // background-image: url('../../assets/files/images/gg.png');
-  // background-size: contain;
-  // background-blend-mode: lighten;
+  background-image: url('../../assets/files/images/pattern_2.png');
+  background-size: cover;
+  background-blend-mode: lighten;
   padding: 140px 0px 100px 0px;
   position: relative;
   display: flex;
   align-items: flex-start;
+  height: 100vh;
   .inner {
     display: flex;
     align-items: center;

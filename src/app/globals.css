@@ -8,8 +8,11 @@
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
   --color-body: #daf0ee;
   --color-primary: #092723;
+  --color-primary-hover: #0d3832;
+  --color-primary-active: #124a42;
   --color-secondary: #9db5b2;
   --color-secondary-hover: #738d89;
+  --color-secondary-active: #556b68;
 }
 
 * {
@@ -29,7 +32,7 @@ body {
   color: rgb(var(--foreground-rgb));
   background-image: url('../assets/files/images/hero-bg.webp');
   background-size: cover;
-  background-color: #daf0ee;
+  background-color: var(--color-body);
   background-repeat: repeat-y;
 }
 
@@ -53,6 +56,76 @@ a {
   }
 }
 
+
+
+/* button types css */
+
+.secondary {
+  color: var(--color-primary) !important;
+  background-color: var(--color-secondary);
+  transition: background-color 0.2s;
+}
+
+.secondary:hover {
+  background-color: var(--color-secondary-hover);
+  transition: background-color 0.2s;
+}
+
+.secondary:active {
+  background-color: var(--color-secondary-active);
+  transition: background-color 0.2s;
+}
+
 .primary {
-  background-color: #092723;
+  background-color: var(--color-primary);
+  transition: background-color 0.2s;
+}
+
+.primary:hover {
+  background-color: var(--color-primary-hover);
+  transition: background-color 0.2s;
+}
+
+.primary:active {
+  background-color: var(--color-primary-active);
+  transition: background-color 0.2s;
+}
+
+.text {
+  background-color: transparent;
+  color: var(--color-primary) !important;
+  transition: color 0.2s;
+}
+
+.text:hover {
+  background-color: transparent;
+  color: var(--color-primary-hover) !important;
+  transition: color 0.2s;
+}
+
+.text:active {
+  background-color: transparent;
+  color: var(--color-primary-active) !important;
+  transition: color 0.2s;
+}
+
+.bordered {
+  background-color: transparent;
+  color: var(--color-primary) !important;
+  border: 1px solid var(--color-primary) !important;
+  transition: color 0.2s;
+}
+
+.bordered:hover {
+  background-color: transparent;
+  color: var(--color-primary-hover) !important;
+  border: 1px solid var(--color-primary-hover) !important;
+  transition: color 0.2s;
+}
+
+.bordered:active {
+  background-color: transparent;
+  color: var(--color-primary-active) !important;
+  border: 1px solid var(--color-primary-active) !important;
+  transition: color 0.2s;
 }
