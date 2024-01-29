@@ -30,10 +30,22 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-image: url('../assets/files/images/hero-bg.webp');
+  background-color:#d4e8e6;
+  
+  /* background-image: url('../assets/files/images/hero-bg.webp');
   background-size: cover;
-  background-color: var(--color-body);
-  background-repeat: repeat-y;
+  background-repeat: repeat-y; */
+  /* The image used */
+  
+  /* background-image: url('https://cdn.pixabay.com/photo/2016/02/27/18/07/clover-1225988_1280.jpg');
+
+  min-height: 500px;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode:luminosity; */
 }
 
 a {
@@ -128,4 +140,19 @@ a {
   color: var(--color-primary-active) !important;
   border: 1px solid var(--color-primary-active) !important;
   transition: color 0.2s;
+}
+
+
+.parallax {
+  /* The image used */
+  background-image: url("../../public/img_parallax.jpg");
+
+  /* Set a specific height */
+  min-height: 500px;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

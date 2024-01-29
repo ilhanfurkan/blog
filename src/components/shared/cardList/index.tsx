@@ -1,9 +1,12 @@
+'use client';
 import React from 'react';
 import Card from '../card';
 import Container from '../../layout/container';
 import styles from './index.module.scss';
 import Animated from '@/components/animated';
 import Link from 'next/link';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 
 export default function CardList(props: any) {
   return (
@@ -21,18 +24,57 @@ export default function CardList(props: any) {
 
           <Animated delay={200} type="slide">
             <div className={styles.card_list}>
-              {props?.data?.map((x: any) => (
-                <div className={styles.card_handler}>
-                  <Link href={`/${x.id}`}>
-                    <Card
-                      title={x?.title}
-                      description={x?.description}
-                      thumbnail={x?.thumbnail}
-                      link={x?.link}
-                    />
-                  </Link>
-                </div>
-              ))}
+              <Swiper
+                effect={'slide'}
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView={'auto'}
+                loop={true} // Add loop prop to make it infinite
+                autoplay={{
+                  delay: 2500,
+                  disableOnInteraction: false,
+                }}
+                coverflowEffect={{
+                  rotate: 50,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 1,
+                  slideShadows: true,
+                }}
+                pagination={true}
+                modules={[Autoplay, EffectCoverflow, Pagination]}
+                className="mySwiper"
+                style={{
+                  width: '100%',
+                  paddingTop: '50px',
+                  paddingBottom: '50px',
+                }}>
+                {props?.data?.map((x: any, index: number) => (
+                  <SwiperSlide
+                    key={index}
+                    style={{
+                      backgroundPosition: 'center',
+                      backgroundSize: 'cover',
+                      width: '560px',
+                      height: '300px',
+                      borderRadius: '10px',
+                      overflow: 'hidden',
+                      marginLeft: '12px',
+                    }}>
+                    <div className={styles.card_handler}>
+                      <Link href={`/${x.id}`}>
+                        <Card
+                          title={x?.title}
+                          description={x?.description}
+                          thumbnail={x?.thumbnail}
+                          little_desc={x?.little_desc}
+                          link={x?.link}
+                        />
+                      </Link>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
           </Animated>
         </div>

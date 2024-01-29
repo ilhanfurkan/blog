@@ -6,31 +6,31 @@ import Animated from '../animated';
 
 const dummyData = [
   {
-    title: 'ReactJS',
+    title: 'nananana',
     description:
       'babababab ababa baba ababa asd asdasdasdas asd asdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd babababab ababa baba ababa asd asdasdasdas asd asdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd babababab ababa baba ababa asd asdasdasdas asd asdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd babababab ababa baba ababa asd asdasdasdas asd asdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd',
-    subtitle: 'Balance Network',
+    subtitle: 'lalallala',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
   },
   {
-    title: 'ReactJS',
+    title: 'dadada',
     description:
       'babababab ababa baba ababa asd asdasdasdas asd asdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd babababab ababa baba ababa asd asdasdasdas asd asdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd babababab ababa baba ababa asd asdasdasdas asd asdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd babababab ababa baba ababa asd asdasdasdas asd asdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd',
-    subtitle: 'Balance Network',
+    subtitle: 'Kakaka',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
   },
   {
-    title: 'ReactJS',
+    title: 'Babaa',
     description:
-      'babababab ababa baba ababa asd asdasdasdas asd asdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd babababab ababa baba ababa asd asdasdasdas asd asdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd babababab ababa baba ababa asd asdasdasdas asd asdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd babababab ababa baba ababa asd asdasdasdas asd asdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd',
-    subtitle: 'Balance Network',
+      'klasjdklasfjalksfj lkasjflk asjflkaj aslkf jalskfjaslkfjalskfja lksfjalks jfla',
+    subtitle: 'Nenene',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
   },
   {
-    title: 'ReactJS',
+    title: 'Zezeze',
     description:
-      'babababab ababa baba ababa asd asdasdasdas asd asdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd babababab ababa baba ababa asd asdasdasdas asd asdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd babababab ababa baba ababa asd asdasdasdas asd asdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd babababab ababa baba ababa asd asdasdasdas asd asdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd',
-    subtitle: 'Balance Network',
+      'sdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd babababab ababa baba ababa asd asdasdasdas asd asdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd babababab ababa baba ababa asd asdasdasdas asd asdasdas asd asdasdas dasd asda ad asdasdas dasd asd asdadasd asd asd asd asd asd asd asd',
+    subtitle: 'Tetete',
     icon: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
   },
 ];
@@ -47,21 +47,23 @@ function RoadMap(props: any) {
         </Animated>
       </div>
       <div className={styles.roadmap_container}>
-        {dummyData.map((x, index) =>
-            <Animated delay={200} type="slide">
-              <div className={styles.holder}>
-                <div className={index % 2 === 0 ? styles.stepLeft : styles.stepRight}>
-                  <RoadMapCard
-                    title={x.title}
-                    description={x.description}
-                    subtitle={x.subtitle}
-                    icon={x.icon}
-                  />
-                </div>
+        {dummyData.map((x, index) => (
+          <Animated delay={200} type="slide">
+            <div className={styles.holder}>
+              <div
+                className={
+                  index % 2 === 0 ? styles.stepLeft : styles.stepRight
+                }>
+                <RoadMapCard
+                  title={x.title}
+                  description={x.description}
+                  subtitle={x.subtitle}
+                  icon={x.icon}
+                />
               </div>
-            </Animated>
-        
-        )}
+            </div>
+          </Animated>
+        ))}
       </div>
     </Container>
   );

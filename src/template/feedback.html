@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback Submission</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+
+      .container {
+        text-align: center;
+        background-color: #9db5b2;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      h2 {
+        color: #092723;
+      }
+
+      p {
+        color: #fff;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      strong {
+        color: #092723;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>SYM Feedback Submitted!</h2>
+      <p>{{suggestion}}</p>
+      <p>{{name}}</p>
+      <p>Rating: <strong>{{ rating }}</strong></p>
+    </div>
+  </body>
+</html>

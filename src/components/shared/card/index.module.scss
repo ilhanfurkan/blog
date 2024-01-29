@@ -1,19 +1,19 @@
 .card_container {
-  border: 1px solid var(--color-secondary);
   max-width: 48%;
   min-width: 540px;
   // max-block-size: 500px;
   height: 240px;
   border-radius: 10px;
-  background-color: #f2f7f7;
+  background-color: var(--color-primary);
   margin-top: 0px;
   transition: 200ms;
   overflow: hidden;
   cursor: pointer;
+  box-shadow: 6px 6px 12px var(--color-secondary-hover);
   &:hover {
-    margin-top: -4px;
-    margin-left: -4px;
-    box-shadow: 6px 6px 12px var(--color-secondary-hover);
+    margin-top: 4px;
+    margin-left: 4px;
+    box-shadow: 0px 0px 0px transparent;
     transition: 200ms;
   }
   .card_content {
@@ -35,14 +35,19 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
-      padding-block: 12px;
-      h2 {
+      .card_title {
+        margin-top: 8px;
         font-weight: 500;
         padding-inline: 12px;
+        color: var(--color-secondary);
       }
-      p {
-        padding-inline: 20px;
-        opacity: 60%;
+      .card_description {
+        background-color: var(--color-primary);
+        top: 60px;
+        block-size: 160px;
+        padding: 8px 16px;
+        overflow: hidden;
+        color: var(--color-secondary-hover);
       }
     }
   }

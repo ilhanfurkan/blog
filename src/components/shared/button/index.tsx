@@ -14,12 +14,20 @@ type ButtonProps = {
   mt?: number;
   mb?: number;
   fullWidth?: boolean;
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'sm' | 'md' | 'lg' | 'expand';
   style?: any;
   link?: string;
   typeButton: 'normal' | 'link';
+  onClick?: (event?: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  disabled?: boolean
 };
+
 export default function Button({ ...props }: ButtonProps) {
+  const handleClick = () => {
+    if (props.onClick) {
+      props.onClick();
+    }
+  };
   return (
     <React.Fragment>
       {props?.typeButton === 'link' ? (
@@ -40,6 +48,8 @@ export default function Button({ ...props }: ButtonProps) {
         <button
           data-size={props?.size}
           className={`${styles.button} ${props?.variant}`}
+          onClick={handleClick}
+          disabled={props.disabled}
           style={{
             ...props?.style,
             marginTop: props?.mt || 0,

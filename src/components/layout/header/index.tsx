@@ -8,6 +8,8 @@ import HamburgerMenu from '@/views/hamburgerMenu';
 import Button from '@/components/shared/button';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import React from 'react';
+import FeedbackModal from '@/components/modal/feedback';
 
 export default function Header() {
   const [scrollY, setScrollY] = useState(0);
@@ -45,18 +47,27 @@ export default function Header() {
     };
   }, [scrollY]);
 
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleIsOpen = () => {
+    setIsOpen(!isOpen);
+  };
+
+  console.log(isOpen,"isOone")
+
   return (
-    <>
+    <React.Fragment>
       <header
         className={`
         ${styles.header} 
         ${!isHeaderVisible && styles.active}
         ${!headerBg && styles.bgColor}`}>
+        <FeedbackModal isOpen={isOpen} handleIsOpen={() => handleIsOpen()} />
         <Container>
           <div className={styles.inner}>
             <div className={styles.logo}>
               <Link href={'/'}>
-                  <Image src={Images.Logo} width={80} height={80} alt="Logo" />
+                <Image src={Images.Logo} width={52} height={52} alt="Logo" />
               </Link>
             </div>
 
@@ -65,26 +76,26 @@ export default function Header() {
               onClick={() => {
                 setVisible(!visible);
               }}>
-              <Image
+              {/* <Image
                 src={Images.HamburgerMenu}
                 width={28}
                 height={36}
                 alt="hamburger menu"
-              />
+              /> */}
             </div>
-            <Navigation />
+            <div className={styles.blog_name}>My Blog</div>
             <div className={styles.right_buttons}>
               <Button
                 typeButton="normal"
                 title="Feedback"
-                variant="primary"
-                link="mailto:hello@balance.software"
+                variant="secondary"
+                onClick={() => handleIsOpen()}
               />
             </div>
           </div>
         </Container>
       </header>
       <HamburgerMenu visible={visible} setVisible={setVisible} />
-    </>
+    </React.Fragment>
   );
 }

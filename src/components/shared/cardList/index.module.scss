@@ -1,4 +1,6 @@
 .card_list_container {
+  position: relative;
+
   display: flex;
   gap: 32px;
   flex-direction: column;
@@ -11,10 +13,42 @@
     }
   }
   .card_list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 24px;
-    padding: 1rem;
+    position: relative;
+    display: flex;
+    gap: 24px;
+    block-size: 360px;
+    max-inline-size: 1160px;
+    &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+      transform: translateY(-54%);
+      inline-size: 100px;
+      block-size: 240px;
+      z-index: 5;
+      background: linear-gradient(
+        to right,
+        var(--color-primary),
+        transparent,
+        transparent
+      );
+    }
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-54%);
+      right: 0;
+      content: '';
+      inline-size: 100px;
+      block-size: 240px;
+      z-index: 5;
+      background: linear-gradient(
+        to left,
+        var(--color-primary),
+        transparent,
+        transparent
+      );
+    }
     .card_handler {
       max-width: 48%;
       min-width: 540px;

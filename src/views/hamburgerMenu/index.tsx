@@ -40,7 +40,7 @@ export default function HamburgerMenu(props: MenuProps) {
           </Container>
         </div>
         <Container>
-          <Button title="Get Started" variant="primary" fullWidth={true} />
+          <Button title="Get Started" variant="primary" fullWidth={true} typeButton={'normal'} />
         </Container>
       </div>
     </div>

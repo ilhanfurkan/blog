@@ -1,5 +1,6 @@
 import Logo from './files/images/logo.png';
 
+
 type ImagesType = {
   [key: string]: any;
 };

@@ -4,6 +4,8 @@ type InputProps = {
   label?: string;
   type: 'text' | 'number';
   placeholder?: string;
+  onChange?: (e?: React.ChangeEvent<HTMLInputElement>) => void;
+  value?: string;
 };
 
 export default function Input(props: InputProps) {
@@ -14,6 +16,8 @@ export default function Input(props: InputProps) {
         type={props?.type}
         placeholder={props?.placeholder}
         className={styles.input}
+        onChange={props?.onChange}
+        value={props.value}
       />
     </div>
   );

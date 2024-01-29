@@ -14,9 +14,9 @@
       transition: 0.5s ease all;
       padding: 10px 20px;
       border-radius: 8px;
-      color: var(--color-primary);
+      color: white;
       &:hover {
-        color: var(--color-secondary-hover);
+        color: var(--color-primary);
       }
     }
   }

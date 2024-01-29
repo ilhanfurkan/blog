@@ -15,6 +15,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .blog_name{
+      font-size: 32px;
+      -webkit-text-stroke: 1px white;
+      color: transparent;
+    }
     .right_buttons {
       display: flex;
       justify-content: flex-end;
@@ -30,7 +35,7 @@
   }
 
   &.bgColor {
-    background-color: var(--color-secondary);
+    background-color: var(--color-primary);
   }
   .hamburger_menu {
     display: none;

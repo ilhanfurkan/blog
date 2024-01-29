@@ -1,0 +1,151 @@
+.container {
+  position: fixed;
+  block-size: 100vh;
+  background-color: #09272386;
+  inline-size: 100vw;
+  display: flex;
+  z-index: 80px;
+  .modal {
+    border: 2px solid var(--color-primary-hover);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    inline-size: 460px;
+    padding: 40px;
+    background-color: var(--color-primary);
+    border-radius: 12px;
+    overflow: hidden;
+    .close {
+      inline-size: 20px;
+      block-size: 20px;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--color-secondary-hover);
+      &:active {
+        color: var(--color-secondary);
+        transform: scale(0.92);
+      }
+    }
+    .content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      overflow: hidden;
+      .successSubmit {
+        position: absolute;
+        inline-size: 100%;
+        block-size: 100%;
+        z-index: 85;
+        background-color: var(--color-primary);
+        display: flex;
+        justify-content: center;
+        .primary {
+          display: flex;
+          gap: 40px;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          div {
+            text-decoration: none;
+            display: flex;
+            padding: 5px 0;
+            font-family: 'Open Sans';
+            font-size: 26px;
+            line-height: 1;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(
+              to right,
+              var(--color-secondary),
+              var(--color-secondary) 50%,
+              #fff 50%
+            );
+            background-size: 200% 100%;
+            animation: download 2500ms ease-out;
+          }
+        }
+      }
+      .body {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        .emojis_part {
+          display: flex;
+          justify-content: center;
+          gap: 24px;
+          span {
+            transition: 0.4s;
+            color: var(--color-secondary);
+            cursor: pointer;
+          }
+          .frown {
+            span {
+              &:hover {
+                color: rgb(196, 32, 32);
+              }
+            }
+          }
+          .meh {
+            span {
+              &:hover {
+                color: rgb(189, 178, 28);
+              }
+            }
+          }
+          .smile {
+            span {
+              &:hover {
+                color: rgb(46, 197, 46);
+              }
+            }
+          }
+          .frown_click {
+            span {
+              color: rgb(196, 32, 32);
+            }
+          }
+          .meh_click {
+            span {
+              color: rgb(189, 178, 28);
+            }
+          }
+          .smile_click {
+            span {
+              color: rgb(46, 197, 46);
+            }
+          }
+        }
+      }
+      .header {
+        text-align: center;
+        font-size: 20px;
+        color: var(--color-secondary-hover);
+      }
+    }
+  }
+}
+
+.container_hidden {
+  inline-size: 100%;
+  display: none;
+}
+
+@keyframes download {
+  0% {
+    background-position: 100%;
+  }
+  100% {
+    background-position: 0%;
+  }
+}

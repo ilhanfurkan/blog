@@ -3,6 +3,7 @@ import Container from '../container';
 import styles from './index.module.scss';
 import Images from '@/assets/images';
 import Link from 'next/link';
+import blogList from '@/config/blog.config.json';
 // import { ServicesData, ServicesDetailData } from '@/data/servicesData';
 // import { ProductsData } from '@/data/productsData';
 
@@ -20,18 +21,11 @@ export default function Footer() {
           <div className={styles.widget}>
             <div className={styles.title}>Blogs</div>
             <ul>
-              <li>
-                <Link href={'#'}>Zart</Link>
-              </li>
-              <li>
-                <Link href={'#'}>Zurt</Link>
-              </li>
-              <li>
-                <Link href={'#'}>Zort</Link>
-              </li>
-              <li>
-                <Link href={'#'}>Zirt</Link>
-              </li>
+              {blogList.slice(0, 4).map((x) => (
+                <li>
+                  <Link href={'#'}>{x.title}</Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div className={styles.widget}>

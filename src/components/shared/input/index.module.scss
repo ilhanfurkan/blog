@@ -16,7 +16,7 @@
     border-radius: 6px;
     color: #000000;
     &:focus {
-      outline: 1px solid #fbbe16;
+      outline: 1px solid var(--color-primary-hover);
     }
   }
 }
