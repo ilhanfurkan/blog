@@ -6,6 +6,7 @@ import styles from './index.module.scss';
 import Container from '@/components/layout/container';
 import AppLayout from '@/components/layout/appLayout';
 import CardList from '@/components/shared/cardList';
+import Image from 'next/image';
 
 export default function BlogsDetail() {
   const id = useParams();
@@ -18,7 +19,11 @@ export default function BlogsDetail() {
           <div className={styles.blog_detail_content}>
             <h1>{blog?.title}</h1>
             <div className={styles.blog_image}>
-              <img width={440} height={302} src={blog?.thumbnail} />
+              <Image
+                src={blog?.thumbnail as string}
+                alt={blog?.title as string}
+                fill
+              />
             </div>
 
             <div

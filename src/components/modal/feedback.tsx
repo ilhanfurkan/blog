@@ -54,59 +54,54 @@ function FeedbackModal({ isOpen, handleIsOpen }: FeedbackModalProps) {
     }
   }
 
+  const config = {
+    to: 'furkan.llhan@hotmail.com',
+    htmlFile: { htmlName: '/template/feedback', title: 'Sym Feedback' },
+    mailRequest: form,
+  };
+
+  console.log(config);
+
   async function handleSuccessSuggestion(
     event: React.FormEvent<HTMLFormElement>
   ) {
     event.preventDefault();
 
     try {
-      console.log('1');
-      const response = await axios.post('/api');
-      console.log('2');
+      const response = await axios.post('/api/feedback', config);
 
-      if (response.data.success) {
-        console.log('3');
-        setSubmitSuccess(true);
+      setSubmitSuccess(true);
 
-        setTimeout(() => {
-          setConfirm({
-            color: 'green',
-            transform: 'scale(0.8)',
-            transition: '0.5s',
-          });
-        }, 2000);
+      setTimeout(() => {
+        setConfirm({
+          color: 'green',
+          transform: 'scale(0.8)',
+          transition: '0.5s',
+        });
+      }, 2000);
 
-        setTimeout(() => {
-          handleIsOpen();
-          setSubmitSuccess(false);
-          setClicked({
-            frown: false,
-            meh: false,
-            smile: false,
-          });
-          setConfirm({
-            color: 'var(--color-secondary)',
-            transform: 'scale(0.5)',
-            transition: '0.5s',
-          });
-          setForm({
-            emoji: '',
-            name: '',
-            email: '',
-            suggestion: '',
-          });
-        }, 2800);
-        console.log('4');
-      } else {
-        console.log('5');
-        // API isteği başarısız olduysa kullanıcıya bilgi verilebilir
-        console.error('Error in sending feedback:', response.data.error);
-        alert('Error in sending feedback. Please try again later.');
-      }
+      setTimeout(() => {
+        handleIsOpen();
+        setSubmitSuccess(false);
+        setClicked({
+          frown: false,
+          meh: false,
+          smile: false,
+        });
+        setConfirm({
+          color: 'var(--color-secondary)',
+          transform: 'scale(0.5)',
+          transition: '0.5s',
+        });
+        setForm({
+          emoji: '',
+          name: '',
+          email: '',
+          suggestion: '',
+        });
+      }, 2800);
     } catch (error) {
-      console.log('6');
-      console.error('Error in sending feedback:', error);
-      alert('Error in sending feedback. Please try again later.');
+      alert(`Error in sending feedback. Please try again later. ${error}`);
     }
   }
 
@@ -145,14 +140,14 @@ function FeedbackModal({ isOpen, handleIsOpen }: FeedbackModalProps) {
                       clicked.frown ? styles.frown_click : styles.frown
                     }
                     onClick={() => {
-                      handleClickEmojis('frown'), handleChange('-1');
+                      handleClickEmojis('frown'), handleChange('Bad');
                     }}>
                     <Icon icon={'frown'} />
                   </div>
                   <div
                     className={clicked.meh ? styles.meh_click : styles.meh}
                     onClick={() => {
-                      handleClickEmojis('meh'), handleChange('0');
+                      handleClickEmojis('meh'), handleChange('Meh');
                     }}>
                     <Icon icon={'meh'} />
                   </div>
@@ -161,7 +156,7 @@ function FeedbackModal({ isOpen, handleIsOpen }: FeedbackModalProps) {
                       clicked.smile ? styles.smile_click : styles.smile
                     }
                     onClick={() => {
-                      handleClickEmojis('smile'), handleChange('1');
+                      handleClickEmojis('smile'), handleChange('Good');
                     }}>
                     <Icon icon={'smile'} />
                   </div>

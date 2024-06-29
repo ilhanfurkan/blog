@@ -1,7 +1,22 @@
 .footer {
-  margin-top: 72px;
+  position: relative;
+  margin-top: 220px;
   background-color: var(--color-primary);
-  padding: 16px 0px 8px 0px;
+  padding: 0px 0px 8px 0px;
+  &::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: 248px;
+    z-index: 1;
+    background-image: url(../../../assets/files/images/cover2.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    block-size: 500px;
+    transform: scaleX(-1);
+  }
   .widgets {
     display: flex;
     border-bottom: 1px solid #191f23;

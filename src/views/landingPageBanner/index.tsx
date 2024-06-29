@@ -24,12 +24,13 @@ export default function LandingPageBanner() {
             </Animated>
           </h1>
             <p className={styles.desc}>little description</p>
-            <Button
+            {/* <Button
               variant="primary"
               title={'Contact Us'}
               typeButton={'normal'}
               size="lg"
-            />
+            /> */}
+            <div className={styles.empty}></div>
         </div>
       </Container>
     </div>

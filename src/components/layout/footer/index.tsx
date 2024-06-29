@@ -4,8 +4,6 @@ import styles from './index.module.scss';
 import Images from '@/assets/images';
 import Link from 'next/link';
 import blogList from '@/config/blog.config.json';
-// import { ServicesData, ServicesDetailData } from '@/data/servicesData';
-// import { ProductsData } from '@/data/productsData';
 
 export default function Footer() {
   return (
@@ -42,7 +40,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href={'#'}>+90 545 663 19 49</Link>
+                <Link href={'#'}>+90 999 99 99</Link>
               </li>
               <li>Türkiye / Istanbul</li>
             </ul>
@@ -50,7 +48,7 @@ export default function Footer() {
         </div>
         <div className={styles.copyright}>
           <p>
-            2023 © All rights reserved by <span>MURKI</span>.
+            2023 © All rights reserved by <span>Murki Yazılım</span>.
           </p>
         </div>
       </Container>

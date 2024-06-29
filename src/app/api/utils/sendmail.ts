@@ -70,11 +70,10 @@ export async function sendMail(
 
     const mailOptions: MailOptions = {
       from: username,
-      to: to,
+      to: 'furkan.llhan@hotmail.com',
       subject: htmlFile.title,
       html: htmlToSend,
     };
-
     // Email sending process
     const info: EmailDeliveryResponse = await transporter.sendMail(mailOptions);
     console.log('Mail sent:', info.messageId);

@@ -30,13 +30,13 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background-color:#d4e8e6;
-  
+  background-color: #e0edec;
+
   /* background-image: url('../assets/files/images/hero-bg.webp');
   background-size: cover;
   background-repeat: repeat-y; */
   /* The image used */
-  
+
   /* background-image: url('https://cdn.pixabay.com/photo/2016/02/27/18/07/clover-1225988_1280.jpg');
 
   min-height: 500px;
@@ -67,8 +67,6 @@ a {
     background-color: #fff;
   }
 }
-
-
 
 /* button types css */
 
@@ -142,10 +140,9 @@ a {
   transition: color 0.2s;
 }
 
-
 .parallax {
   /* The image used */
-  background-image: url("../../public/img_parallax.jpg");
+  background-image: url('../../public/img_parallax.jpg');
 
   /* Set a specific height */
   min-height: 500px;

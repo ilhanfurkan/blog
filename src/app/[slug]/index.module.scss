@@ -5,7 +5,7 @@
   gap: 24px;
   .blog_detail_banner {
     position: relative;
-    block-size: 30vh;
+    block-size: 20vh;
     inline-size: 100%;
     color: rgb(var(--foreground-rgb));
     background-color: var(--color-body);
@@ -20,31 +20,26 @@
     position: relative;
     text-align: center;
     display: flex;
+    flex-direction: column;
     gap: 120px;
     min-block-size: 50vh;
     h1 {
-      border: 1px solid var(--color-secondary);
-      box-shadow: inset 0px 0px 12px var(--color-primary);
       border-radius: 4px;
       padding: 8px;
-      position: absolute;
       text-transform: uppercase;
-      inline-size: 500px;
+      inline-size: 100%;
+      block-size: fit-content;
       text-align: center;
       z-index: 12;
       font-size: 52px;
-      left: 70%;
-      transform: translateX(-50%);
-      color: var(--color-primary);
+      color: var(--color-secondary);
     }
     .blog_image {
       position: absolute;
       border: 4px solid var(--color-body);
       border-radius: 4px;
-      left: 25%;
       top: -100px;
-      transform: translateX(-50%);
-      inline-size: 442px;
+      inline-size: 100%;
       block-size: 300px;
       overflow: hidden;
       &::after {
@@ -58,11 +53,11 @@
         opacity: 0.3;
       }
       img {
-        object-fit: cover;
+        object-fit: cover !important;
       }
     }
     .content {
-      margin-top: 280px;
+      margin-top: 28px;
       inline-size: 100%;
       padding-inline: 140px;
       min-inline-size: 340px;
