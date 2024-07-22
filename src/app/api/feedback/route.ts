@@ -15,5 +15,5 @@ export async function POST(request: Request) {
 
   await sendMail(data?.to, data?.htmlFile, data?.mailRequest, userMailConfig);
 
-  return NextResponse.json({ message: 'Success' }, { status: 2 });
+  return NextResponse.json({ message: 'Success' }, { status: 200 });
 }
