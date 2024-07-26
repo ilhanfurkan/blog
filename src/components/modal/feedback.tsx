@@ -193,9 +193,7 @@ function FeedbackModal({ isOpen, handleIsOpen }: FeedbackModalProps) {
             {submitSuccess && (
               <div className={styles.successSubmit}>
                 <div className={styles.primary}>
-                  <div>
-                    Thank you for your feedback. We appreciate your input.
-                  </div>
+                  <div>We appreciate your input and your feedback.</div>
                   <div
                     style={{
                       color: `${confirm.color}`,
